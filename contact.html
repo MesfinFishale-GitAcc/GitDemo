@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - SecureBank</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation (same as index.html) -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-university"></i>
+                <h1>SecureBank</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="products.html"><i class="fas fa-credit-card"></i> Products</a></li>
+                <li><a href="contact.html" class="active"><i class="fas fa-phone-alt"></i> Contact Us</a></li>
+                <li><a href="login.html" class="login-btn"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Hero -->
+    <section class="contact-hero">
+        <h2>Get in Touch</h2>
+        <p>We're here to help you with all your banking needs</p>
+    </section>
+
+    <!-- Contact Content -->
+    <section class="contact-content">
+        <div class="contact-info">
+            <div class="info-card">
+                <i class="fas fa-map-marker-alt"></i>
+                <h3>Visit Our Branch</h3>
+                <p>123 Banking Street<br>Financial City, FC 12345</p>
+            </div>
+            <div class="info-card">
+                <i class="fas fa-phone"></i>
+                <h3>Call Us</h3>
+                <p>+1 (555) 123-4567<br>Mon-Fri: 9AM-6PM</p>
+            </div>
+            <div class="info-card">
+                <i class="fas fa-envelope"></i>
+                <h3>Email Us</h3>
+                <p>support@securebank.com<br>response within 24 hours</p>
+            </div>
+        </div>
+
+        <div class="contact-form-section">
+            <div class="form-container">
+                <h3>Send us a Message</h3>
+                <form id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Full Name *</label>
+                            <input type="text" id="contactName" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Email Address *</label>
+                            <input type="email" id="contactEmail" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Subject</label>
+                        <input type="text" id="contactSubject" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Message *</label>
+                        <textarea id="contactMessage" rows="5" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Query Type</label>
+                        <select id="queryType">
+                            <option>Account Related</option>
+                            <option>Loan Inquiry</option>
+                            <option>Technical Support</option>
+                            <option>Complaint</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn-primary">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                </form>
+            </div>
+
+            <div class="faq-section">
+                <h3>Frequently Asked Questions</h3>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>How do I open an account?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>You can open an account online through our website or visit any branch with your KYC documents.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>What are your working hours?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Our branches are open from 9 AM to 6 PM, Monday to Saturday. Online banking is available 24/7.</p>
+                        </div>
+                    </div>
+                    <!-- Add more FAQ items -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <div class="map-section">
+        <h3>Find Our Nearest Branch</h3>
+        <div class="map-placeholder">
+            <i class="fas fa-map"></i>
+            <p>Interactive Map would be here</p>
+            <p>123 Banking Street, Financial City</p>
+        </div>
+    </div>
+
+    <!-- Footer (same as index.html) -->
+    <footer class="footer">
+        <!-- Same footer content as index.html -->
+    </footer>
+
+    <!-- Success Modal -->
+    <div class="modal" id="contactSuccessModal">
+        <div class="modal-content">
+            <div class="modal-icon success">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h3>Message Sent!</h3>
+            <p>Thank you for contacting us. We'll get back to you within 24 hours.</p>
+            <button class="modal-btn" onclick="closeContactModal()">OK</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

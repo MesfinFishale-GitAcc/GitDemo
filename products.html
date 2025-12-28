@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products & Services - SecureBank</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation (same as index.html) -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-university"></i>
+                <h1>SecureBank</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="products.html" class="active"><i class="fas fa-credit-card"></i> Products</a></li>
+                <li><a href="contact.html"><i class="fas fa-phone-alt"></i> Contact Us</a></li>
+                <li><a href="login.html" class="login-btn"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Products Hero -->
+    <section class="products-hero">
+        <h2>Our Products & Services</h2>
+        <p>Comprehensive banking solutions for all your needs</p>
+    </section>
+
+    <!-- Products Grid -->
+    <section class="products-grid">
+        <div class="product-category" id="savings">
+            <div class="category-header">
+                <i class="fas fa-piggy-bank"></i>
+                <h3>Savings Accounts</h3>
+            </div>
+            <div class="products-list">
+                <div class="product-card">
+                    <h4>Regular Savings</h4>
+                    <p class="product-desc">Basic savings account with no minimum balance</p>
+                    <ul class="product-features">
+                        <li><i class="fas fa-check"></i> 4% Interest Rate</li>
+                        <li><i class="fas fa-check"></i> Free Debit Card</li>
+                        <li><i class="fas fa-check"></i> Net Banking</li>
+                    </ul>
+                    <button class="btn-outline" onclick="openApplyForm('Regular Savings')">Apply Now</button>
+                </div>
+                <div class="product-card">
+                    <h4>Premium Savings</h4>
+                    <p class="product-desc">High-interest savings for premium customers</p>
+                    <ul class="product-features">
+                        <li><i class="fas fa-check"></i> 6.5% Interest Rate</li>
+                        <li><i class="fas fa-check"></i> Priority Service</li>
+                        <li><i class="fas fa-check"></i> Free Insurance</li>
+                    </ul>
+                    <button class="btn-outline" onclick="openApplyForm('Premium Savings')">Apply Now</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-category" id="loans">
+            <div class="category-header">
+                <i class="fas fa-hand-holding-usd"></i>
+                <h3>Loan Products</h3>
+            </div>
+            <div class="products-list">
+                <div class="product-card">
+                    <h4>Home Loan</h4>
+                    <p class="product-desc">Buy your dream home with attractive rates</p>
+                    <ul class="product-features">
+                        <li><i class="fas fa-check"></i> Up to ₹2 Crore</li>
+                        <li><i class="fas fa-check"></i> 8.5% Interest</li>
+                        <li><i class="fas fa-check"></i> 30 Years Tenure</li>
+                    </ul>
+                    <button class="btn-outline" onclick="openApplyForm('Home Loan')">Apply Now</button>
+                </div>
+                <div class="product-card">
+                    <h4>Personal Loan</h4>
+                    <p class="product-desc">Instant personal loans for your needs</p>
+                    <ul class="product-features">
+                        <li><i class="fas fa-check"></i> Up to ₹20 Lakh</li>
+                        <li><i class="fas fa-check"></i> Quick Approval</li>
+                        <li><i class="fas fa-check"></i> No Collateral</li>
+                    </ul>
+                    <button class="btn-outline" onclick="openApplyForm('Personal Loan')">Apply Now</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Add more categories for Cards, Investments, etc. -->
+    </section>
+
+    <!-- Compare Products -->
+    <section class="compare-section">
+        <h3>Compare Accounts</h3>
+        <div class="compare-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Feature</th>
+                        <th>Regular Savings</th>
+                        <th>Premium Savings</th>
+                        <th>Student Account</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Minimum Balance</td>
+                        <td>₹1,000</td>
+                        <td>₹25,000</td>
+                        <td>₹0</td>
+                    </tr>
+                    <tr>
+                        <td>Interest Rate</td>
+                        <td>4%</td>
+                        <td>6.5%</td>
+                        <td>3%</td>
+                    </tr>
+                    <tr>
+                        <td>Debit Card</td>
+                        <td>Free</td>
+                        <td>Premium</td>
+                        <td>Free</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Footer (same as index.html) -->
+    <footer class="footer">
+        <!-- Same footer content as index.html -->
+    </footer>
+
+    <!-- Application Modal -->
+    <div class="modal" id="applyModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Apply for <span id="productName"></span></h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="applicationForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Full Name</label>
+                            <input type="text" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Phone Number</label>
+                            <input type="tel" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Monthly Income</label>
+                            <input type="number" required>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn-primary">Submit Application</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
